@@ -1,17 +1,25 @@
 import express from "express";
 import bodyParser from "body-parser";
-import booksRoutes from "./routes/bookRoutes.js";
 import mongoose from "mongoose";
+import swaggerUi from "swagger-ui-express";
+
+import booksRoutes from "./routes/bookRoutes.js";
+import swaggerDocs from "../swaggerDocs.js";
+
 // complete application is here
 const app = express();
 const port = 3000;
 
+// app uses json
 app.use(bodyParser.json());
 
-//routes are /books & everything else throws a 404
+// only book routes and documentation is valid
+// everything else throws a 404
 app.use("/books", booksRoutes);
+app.use("/api", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.all("*", (req, res) => res.sendStatus(404));
 
+// connect to database
 mongoose.connect("mongodb://mongo:27017/test").then(() => {
   console.log("Database connected");
 });
