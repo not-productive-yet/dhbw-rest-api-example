@@ -1,21 +1,30 @@
-# Examle REST API Book Service built with Express.js
+# Example REST API Book Service
 
-### Run ´npm start´ to start server
+### Run ´npm run d-up´ to start server and MongoDB
 
-## Initial API documentation
+## API calls
 
 - GET /books
 - GET /books/{id}
 - GET /books/search?name={name}
 - POST /books
 
-## Files
+## Files & Folders
+
+### API
 
 - **index.js**: app entry point
-- **bookRoutes.js**: contains all available
-- **bookController.js**: contains functions for each route as well as validation
+- **./routes**: contains all available routes
+- **./controllers**: contains functions for each route as well as validators
+- **./models**: contains the data model to be persisted in MongoDB
+- **package.json**: contains all app dependencies, as well as scripts and meta information
 
-## Docs
+### Docker
+
+- **Dockerfile**: Docker Image definition for the backend
+- **.dockerignore**: Files to be ignored by docker
+
+## Docs for further reading
 
 - **Express.js**: https://expressjs.com
 - **Express validators**: https://express-validator.github.io/docs/custom-error-messages.html
