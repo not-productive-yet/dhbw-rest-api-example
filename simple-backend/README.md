@@ -1,6 +1,6 @@
-# Example REST API Book Service
+# Example REST API Book Service 📚 📚 
 
-### Run ´npm run d-up´ to start server and MongoDB
+### Run `npm run d-up` to start server and MongoDB
 
 ## API calls
 
@@ -11,7 +11,7 @@
 
 ## Files & Folders
 
-### API
+#### API
 
 - **index.js**: app entry point
 - **./routes**: contains all available routes
@@ -19,7 +19,7 @@
 - **./models**: contains the data model to be persisted in MongoDB
 - **package.json**: contains all app dependencies, as well as scripts and meta information
 
-### Docker
+#### Docker
 
 - **Dockerfile**: Docker Image definition for the backend
 - **.dockerignore**: Files to be ignored by docker
