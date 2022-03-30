@@ -9,6 +9,9 @@
 - GET /books/search?name={name}
 - POST /books
 
+<span style="color:blue"> -> Go to localhost:300/api for documentation </span>
+
+
 ## Files & Folders
 
 #### API
@@ -23,6 +26,10 @@
 
 - **Dockerfile**: Docker Image definition for the backend
 - **.dockerignore**: Files to be ignored by docker
+
+#### Swagger
+
+- **swaggerDocs.js** contains OpenAPI specification
 
 ## Docs for further reading
 
