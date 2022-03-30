@@ -25,7 +25,7 @@ export const addBook = async (req, res) => {
     pages: req.body.pages,
   });
 
-  book.save(book).then((todo) => res.status(201).send(todo));
+  book.save(book).then((book) => res.status(201).send(book));
 };
 
 // attached as second param in a route
