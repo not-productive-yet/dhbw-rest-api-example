@@ -2,7 +2,8 @@ import { check, validationResult } from "express-validator";
 import { Book } from "../models/book.js";
 
 export const getBooks = async (req, res) => {
-  res.set("Access-Control-Allow-Origin", "*");
+  // allow frontend to access this call
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const books = await Book.find();
   res.status(200).send(books);
 };
